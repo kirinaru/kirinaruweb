@@ -115,7 +115,7 @@ align-items: center;
 
 
   #nav-button {
-    display: none; transition: 0.5s;}
+    display: none; transition: 0.5s; border: none;}
 
     /* das bild mit dem man pause und wiedergabe steuert */
      #playimg {
@@ -250,11 +250,11 @@ to {
   #nav-button {
     color:#ce29b5; background-color: #1C00ff00; border:none; font-size: 40px;
     margin: 0;transition: 0.6s; display: inline; justify-content: right;
-    align-items: right;}
+    align-items: right; border: none;}
 
   #nav-button2 {
     color:#ce29b5;background-color: #353235; border:none; font-size: 60px;
-    float: left; transition: 0.6s;}
+    float: left; transition: 0.6s; border: none;}
 
 
 
