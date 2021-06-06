@@ -1,0 +1,149 @@
+<html>
+<head>
+  <title id="title">kiri radio | kirinaru</title>
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="style/style.css">
+  <meta name="theme-color" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
+  <script defer scr="navbar-function-mobile.js"></script>
+  </head>
+  <div class="top">
+  <body>
+
+
+      <button id="nav-button" onclick="toggle()"><img id="navbuttonimg" src="naviconwhite.svg"></button>
+    <div class="top-nav">
+    <nav>
+      <div id="nav-desktop" class="nav-desktop">
+      <a href="index.html" class="home" style="text-decoration:none"><span>Home</span></a>
+      <a href="#" class="converter" style="text-decoration:none"><span>Programs</span></a>
+      <a href="radio.html" class="radio" style="text-decoration:none"><span>Radio</span></a>
+      <a href="skills.html" style="text-decoration:none"><span>Games</span></a>
+      <a href="#" style="text-decoration:none" class="radio"><span>Join the Discord</span></a>
+      </div>
+    </div>
+      <div class="nav-mobile">
+        <script>
+        function toggle() {
+          if (document.getElementById('overlay').style.display  === "none") {
+            document.getElementById('overlay').style.opacity  = 1;
+            document.getElementById('overlay').style.display = "block";
+          }else{
+            document.getElementById('overlay').style.opacity  = 0;
+            setTimeout(function () {
+              document.getElementById('overlay').style.display  = "none";
+            },500);
+          }
+        };
+        </script>
+        <div id="overlay">
+          <button id="nav-button2" onclick="toggle()"><img id="navbuttonximg" src="naviconxwhite.svg"></button>
+          <a><span> </span></a>
+          <a href="index.html" style="text-decoration:none"><span>Home</span></a>
+          <a href="#" class="converter" style="text-decoration:none"><span>Programs</span></a>
+          <a href="radio.html" class="radio" style="text-decoration:none"><span>Radio</span></a>
+          <a href="skills.html" class="radio" style="text-decoration:none"><span>Games</span></a>
+          <a href="#" style="text-decoration:none"><span>Join the Discord</span></a>
+      </div>
+    </nav>
+      </div>
+  </div>
+  <div class="content">
+  <div class="welcomeradio" id="welcomeradio">
+    <!--<img class="musicimg"src="olena-sergienko-2ZOHXRaZfFQ-unsplash1.png"> -->
+    <button class="invisble"></button>
+    <button class="invisble"></button>
+    <button class="invisble"></button>
+<div class="allradiostuff" id="allradiostuff">
+    <!-- der button der die Musik steuert, die Quelle muss nicht mehr geändert werden,
+  da ich jetzt mit variablen arbeiten :)-->
+    <button id="play" onclick="playpausefunc()"><img id="playimg" src="playbuttonwhite.svg">
+    </button>
+    </button>
+    <!-- ich will einen radio bauen nur mit scource ist das nicht möglich zumindest nicht so wie
+    ich mir das vorgestellt habe...-->
+
+
+    <audio id="radio" loop volume="0.1" ontimeupdate="document.getElementById('tracktime').innerHTML
+    = Math.floor(this.currentTime);">
+      <source src="assets/tracks/kiriradio1.0.mp3" type="audio/mpeg" />
+
+    <p>
+    Your browser does not support the <code>audio</code> element.
+    </p>
+  </audio>
+  <script>
+
+  var checkpauseplay = 0;
+  /* steuert wie oben schon angedeutet den toogle zwischen pause und play die scourece muss wie oben erwähnt je nach
+  Anwender geändert werden du kannst dir die Quelle mit den befehl alert(source); ausgeben lassen ;) */
+  function playpausefunc() {
+    audio1  = document.getElementById("radio")
+    source = document.getElementById("playimg").src
+    if (checkpauseplay === 1) {
+        document.getElementById("playimg").src = "playbuttonwhite.svg";
+        audio1.pause();
+        checkpauseplay = 0;
+    }else {
+      source = document.getElementById("playimg").src
+      document.getElementById("playimg").src = "pausebuttonwhite.svg";
+      document.getElementById("radio").volume = 0.1;
+      audio1.play();
+      checkpauseplay = 1;
+    }
+  };
+  </script>
+<!-- <div class="slider">
+  <input type="range" min="1" max="10" value="10"
+</div>
+-->
+<div class="trackers">
+<button id="tracktime" class="tracktime">0</button>
+</div>
+<div class="othercontrols">
+<button class="randomsong" id="randomsong" onclick="randomsong()"><img id="randomimg" src="randombuttonwhite.svg" ></button>
+
+</button>
+<button class="terminate" id="terminate" onclick="terminate()" ><img class="terminateimg" src="terminatebuttonwhite.svg"></button>
+</div>
+</div>
+<script>
+audio1  = document.getElementById("radio")
+function terminate(){
+  document.getElementById("playimg").src = "playbuttonwhite.svg";
+  audio1.pause();
+  audio1.currentTime = 0;
+}
+
+function randomsong() {
+  var random = Math.floor(Math.random() * 1800);
+  document.getElementById("playimg").src = "pausebuttonwhite.svg";
+  document.getElementById("radio").volume = 0.1;
+  audio1.play();
+  audio1.currentTime =  random;
+
+}
+</script>
+</div>
+<!-- hier fängt der loader an lul -->
+<div class="loader" id="loader">
+  <img src="assets/gifs/gateway.gif" />
+</div>
+
+<script>
+window.onload = function () {
+ setTimeout(function () {
+   document.getElementById("loader").style.display = "none";
+ },500);
+};
+</script>
+  </div>
+
+<div class="footer">
+
+</div>
+</body>
+</html>

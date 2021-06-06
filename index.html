@@ -1,0 +1,124 @@
+<html>
+<head>
+<!-- Achtung! Komentare sind in radio.html und style.css nicht hier weil das hier alles endweder in
+radio.html erklärt wurde, oder selbstverständlich ist ;) -->
+<title id="title">kirinaru</title>
+<link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="style/style.css">
+<meta name="theme-color" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
+<script defer scr="navbar-function-mobile.js"></script>
+</head>
+<div class="top">
+<body>
+
+  <button id="nav-button" onclick="toggle()"><img id="navbuttonimg" src="naviconwhite.svg"></button>
+  <div class="top-nav">
+  <nav>
+    <div id="nav-desktop" class="nav-desktop">
+    <a href="index.html" class="home" style="text-decoration:none"><span>Home</span></a>
+    <a href="#" class="converter" style="text-decoration:none"><span>Programs</span></a>
+    <a href="radio.html" class="radio" style="text-decoration:none"><span>Radio</span></a>
+    <a href="skills.html" style="text-decoration:none"><span>Games</span></a>
+    <a href="#" style="text-decoration:none" class="radio"><span>Join the Discord</span></a>
+    </div>
+  </div>
+    <div class="nav-mobile">
+      <script>
+      function toggle() {
+        if (document.getElementById('overlay').style.display  === "none") {
+          document.getElementById('overlay').style.opacity  = 1;
+          document.getElementById('overlay').style.display = "block";
+        }else{
+          document.getElementById('overlay').style.opacity  = 0;
+          setTimeout(function () {
+            document.getElementById('overlay').style.display  = "none";
+          },500);
+        }
+      };
+      </script>
+      <div id="overlay">
+        <button id="nav-button2" onclick="toggle()"><img id="navbuttonximg" src="naviconxwhite.svg"></button>
+        <a><span> </span></a>
+        <a href="index.html" style="text-decoration:none"><span>Home</span></a>
+        <a href="#" class="converter" style="text-decoration:none"><span>Programs</span></a>
+        <a href="radio.html" class="radio" style="text-decoration:none"><span>Radio</span></a>
+        <a href="skills.html" class="radio" style="text-decoration:none"><span>Games</span></a>
+        <a href="#" style="text-decoration:none"><span>Join the Discord</span></a>
+        <button class="invisble"></button>
+        <button class="invisble"></button>
+        <button class="invisble"></button>
+        <button class="secret">secret</button>
+    </div>
+  </nav>
+    </div>
+</div>
+<script>
+function bgchange() {
+  var random = Math.floor(Math.random() *4);
+  var randomimg = "url(../assets/img/"+random+".jpg);";
+  document.getElementById("welcome").style.backgroundImage = randomimg;
+}
+</script>
+<div class="content">
+<div class="welcome" id="welcome">
+  <h4 id="curios05">stay curios</h4>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <button class="invisble"></button>
+  <a id="learnmore" href="#page1" ><img src="arrowdownwhite.svg" id="learnmoreimg"></a>
+</div>
+
+
+<div id="page1">
+<p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+   lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem
+ ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+   ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+   lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+   ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+</div>
+
+
+
+
+
+
+
+</div>
+  <div class="loader" id="loader">
+    <img src="assets/gifs/gateway.gif" />
+  </div>
+  <script>
+  window.onload = function () {
+   setTimeout(function () {
+     document.getElementById("loader").style.display = "none";
+   },500);
+  };
+  </script>
+</div>
+<div class="footer">
+
+</div>
+</body>
+</html>

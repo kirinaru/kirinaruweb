@@ -1,0 +1,394 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0; margin: 0px;background-color: #302d2f;font-family: 'Baloo Bhaina 2', cursive;}
+
+.invisble{
+  visibility:hidden; display: block; height:  40px;
+}
+
+#welcome{
+  background-image: url(../assets/img/1.jpg);
+  background-size: cover;
+}
+#tracktime{display: flex;
+  justify-content: center;
+  align-items: center; background-color: #514e51; color: white;
+  border-radius: 10rem; padding: 0.5rem; border: none;
+  margin-top: 20px;
+}
+.trackers{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* desktop Ansicht funktioniert fast gut */
+@media only screen and (min-width:820px) {
+
+
+  @keyframes slide-left {
+  from {
+    margin-left: 50%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+  #learnmoreimg{
+    width: 80px; height: 80px; align-self: center;
+  }
+
+  #learnmore{
+    background: none;
+    border: none;
+    position: relative;
+    top: -5px;
+    transition: top  0.5s;
+    left: calc(50% - 80px);
+  }
+
+  #learnmore:hover {
+    top: -25px;
+    transition: top: 0.8s;
+  }
+
+  #curios05:hover {
+        letter-spacing: 10px;
+      }
+  #curios05 {
+    text-align: center;
+    font-size: 170px;
+    transition: 0.5s;
+    position: absolute; width: 100%;
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+    /* background: linear-gradient(to left, #f32170,#ff6b08, #cf23cf, #eedd44); */
+    background: linear-gradient(to right, #ed1cab, #fd6018);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+     animation: slide-left 3s;}
+
+
+
+  .musicimg{
+    width: 20%; height: 60%; position: absolute;
+     float: right; right: 25%;
+  }
+
+  .top{position: fixed;
+background-color: rgba(0, 0, 0, 0.4);
+align-content: center;
+z-index: 1100;left: 0px;
+right: 0px; margin-bottom: 20px;}
+
+.top-nav{
+  max-width: 1280px;width: 100%;
+}
+
+.nav-desktop{
+  width: 100%;
+height: 60px;display: flex;justify-content: center;
+align-items: center;
+}
+  .loader > img {
+    width: 30%;
+  }
+
+
+  nav span {
+    text-align: left;
+     padding: 20 5px;font-weight: bold;
+    font-size: 1.500rem; text-transform: uppercase;
+  transition: 0.5s;color: #514e51; position:static; top: 0;}
+
+  nav span:hover{
+  color:#ce29b5;transition: 0.5s;}
+
+  .nav-mobile{
+    display:none;}
+
+
+  #nav-button {
+    display: none; transition: 0.5s;}
+
+    /* das bild mit dem man pause und wiedergabe steuert */
+     #playimg {
+      width: 70%; height: 70%; color: white;margin: 0 auto;}
+
+    .othercontrols{
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    #randomimg {
+      width: 40px; height: 40px; color: white;margin: 0 auto;
+    }
+
+    #randomsong{
+      width: 60px; height: 60px; background-color:#514e51 ;
+      border-radius: 10rem; padding: 0.5rem;margin: 20px;display: inline-flex; border: none;
+      transition: 0.6s; align-items: center; cursor: pointer;
+    }
+
+    .terminate{
+      width: 60px; height: 60px; background-color:#514e51 ;
+      border-radius: 10rem; padding: 0.5rem;margin: 20px; display: inline-flex; border: none;
+      transition: 0.6s; align-items: center; position: relative;cursor: pointer;
+    }
+
+    .terminateimg{
+      width: 40px; height: 40px; color: white;margin: 0 auto; transition: 0.6s;
+    }
+
+    /* der Button mit dem man ebenfals  pause und wiedergabe steuert */
+    #play {
+      width: 150px; height: 150px; background-image: linear-gradient(to left,#FEEBFF,#FE80FE,#DC63FE);
+      border-radius: 10rem; padding: 0.5rem;margin: 0 auto; display: block; border: none; margin-top: 35px;
+      transition: 0.6s;cursor: pointer;}
+
+
+      .top img{
+        width: 100%;
+        position: relative;padding-left: 30px;float: left; display: flex;
+      }
+
+}
+/* Mobile Geräte Ansicht, funktion nicht ganz so gut */
+@media only screen and (max-width:820px) {
+
+  .secret{
+    border: none;
+    width: 30px;
+    height: 20px;
+    font-size: 9px;
+    background-color: #353235;
+  }
+
+
+  #navbuttonimg {
+    width: 75px;
+    height:75px;
+  }
+  #navbuttonximg {
+    width: 75px;
+    height:75px;
+  }
+
+  @keyframes slide-right-fornav {
+  from {
+    margin-left: -100%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slide-left-fornav {
+from {
+  margin-left: 100%;
+  width: 100%;
+}
+
+to {
+  margin-left: 0%;
+  width: 100%;
+}
+}
+
+@keyframes slide-left {
+from {
+  margin-left: 50%;
+  width: 100%;
+}
+
+to {
+  margin-left: 0%;
+  width: 100%;
+}
+}
+
+  #curios05:hover {
+        letter-spacing: 10px;
+      }
+
+  #curios05 {
+    transition: 0.5s;
+    border: 10px;
+    text-align: center;
+    font-size: 100px;
+    position: absolute; width: 100%;
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+    /* background: linear-gradient(to left, #f32170,#ff6b08, #cf23cf, #eedd44); */
+    background: linear-gradient(to left, #ed1cab, #fd6018);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+     animation: slide-left 3s;}
+
+  #learnmore{
+    display: none;
+  }
+
+  .loader > img {
+    width: 70%;
+  }
+
+  nav span{
+       top: 20px; color: #514e51;font-size: 40px;transition: 0.5s;display: block;
+       text-transform: uppercase;}
+
+  nav span:hover{
+     color:#ce29b5;transition: 0.5s;}
+
+  #nav-button {
+    color:#ce29b5; background-color: #1C00ff00; border:none; font-size: 40px;
+    margin: 0;transition: 0.6s; display: inline; justify-content: right;
+    align-items: right;}
+
+  #nav-button2 {
+    color:#ce29b5;background-color: #353235; border:none; font-size: 60px;
+    float: left; transition: 0.6s;}
+
+
+
+  .top span {
+    display: block; font-size: 50px;
+    color: #514e51;transition: 0.5s; text-align: center;}
+
+    .top span:hover{
+       color:#ce29b5;transition: 0.5s;}
+
+
+  #nav-desktop{
+    display: none;transition: 0.6s;}
+
+  #overlay{
+      opacity: 0;
+      position: fixed;display:none;
+      width: 100%;height: 100%;top: 0;
+      left: 0;right: 0;bottom: 0;background-color: #353235;z-index: 2;
+      cursor:default;animation: slide-right-fornav 1s;transition: opacity 1s;}
+
+  #logo{
+        width: 120px; height: 120px;  display: flex;
+        cursor:pointer; padding-bottom: 0; margin-bottom: 0; transition: 0.6s;padding-left: 30px;}
+
+  .othercontrols{
+          display: flex; align-items: center; justify-content: center;
+        }
+
+        /* das bild mit dem man pause und wiedergabe steuert */
+  #playimg {
+          width: 70%; height: 70%; color: white;margin: 0 auto;}
+
+        /* der Button mit dem man ebenfals  pause und wiedergabe steuert */
+  #play {
+          width: 140px; height: 140px; background-image: linear-gradient(to right,#FEEBFF,#FE80FE,#DC63FE);
+          border-radius: 10rem; padding: 0.5rem;margin: 0 auto; display: block; border: none; margin-top: 35px;color: #fff;
+          background-size: 200%;transition: 0.6s;}
+
+  #play:hover {
+         background-position: left;
+        }
+
+        #randomimg {
+          width: 40px; height: 40px; color: white;margin: 0 auto;
+        }
+
+        #randomsong{
+          width: 60px; height: 60px; background-color:#514e51 ;
+          border-radius: 10rem; padding: 0.5rem;margin: 20px;display: inline-flex; border: none;
+          transition: 0.6s; align-items: center; cursor: pointer;
+        }
+
+        .terminate{
+          width: 60px; height: 60px; background-color:#514e51 ;
+          border-radius: 10rem; padding: 0.5rem;margin: 20px; display: inline-flex; border: none;
+          transition: 0.6s; align-items: center; position: relative;cursor: pointer;
+        }
+
+        .terminateimg{
+          width: 40px; height: 40px; color: white;margin: 0 auto; transition: 0.6s;
+        }
+
+
+
+
+  }
+}
+
+
+
+
+
+
+
+.content {
+background-color: #302d2f;}
+
+/* formatierung für h2 in content */
+
+
+/*audio (diesen syle habe ich deaktiviert einfach nicht beachten ;) ) {
+     background-image: linear-gradient(to left,#FEEBFF,#FE80FE,#DC63FE);
+     border-radius: 10rem; padding: 0.5rem;margin: 0 auto; display: block;}
+*/
+
+
+
+
+#terminate{
+  margin-top: 20px;}
+
+/* standart button style auf der seite, wird auch für den Lizens button verwendet*/
+.btn {
+  background-color: #00000000;
+   border-radius: 0.4rem; padding-top:0.01rem; padding-bottom:0.001rem; margin: 0 auto; display: block; border-color: #514e51;
+   border-style: solid; transition: 0.5s;
+}
+.btn:hover {
+border-color:#ce29b5;transition: 0.5s;
+}
+.btn p {
+  color:#514e51; transition: 0.5s; text-align: center;text-transform: uppercase;}
+
+.btn:hover p{
+  color:#ce29b5;transition: 0.5s;
+}
+.btn:active{
+background-color: #ce29b5;
+}
+.btn:active p{
+  color: #fff;}
+
+/*der Seiten loader */
+  .loader alt {
+    color: #fff;
+  }
+  .loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+.content h3 {
+  font-size: 100px; color: #8f938d; font-family:
+  'DM Sans', sans-serif; display: inline;
+}
