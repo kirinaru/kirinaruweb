@@ -10,8 +10,32 @@ radio.html erklärt wurde, oder selbstverständlich ist ;) -->
 <meta name="theme-color" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+</style>
 <script defer scr="navbar-function-mobile.js"></script>
 </head>
+<div class="content">
+
+  <div id="no-safari">
+    <div id="no-safari-popup">
+      <img src="assets/img/safari-logo.png" class="safari-logo">
+      <div class="sergr">
+      <p id="safari-info-text-styling">Da du Safari oder einen anderen Browser mit Webkit verwendest, sind einige funktionen
+      dieser Webseite eingeschränkt oder nicht verfügbar. Daher empfehlen wir</p> <p id="safari-info-text-styling"><a href="www.google.com/chrome">Chrome</a></p> <p id="safari-info-text-styling">oder</p>
+      <p id="safari-info-text-styling"><a href="www.firefox.com/getfirefox">Firefox</a></p> <br id="safari-info-text-styling"><p id="safari-info-text-styling">zu verwenden. Wir weisen Sie darauf hin, dass jeder Browser auf einem Apple™ Gerät
+        Webkit benutzt.</p></br>
+      </div>
+      <button onclick="closeNoSafariPopup()" id="close-safari-popup">Verstanden!</button>
+    </div>
+  </div>
+  <script>
+  function closeNoSafariPopup() {
+    document.getElementById("no-safari").style.display = "none";
+  };
+
+  </script>
+
 <div class="top">
 <body>
 
@@ -63,7 +87,8 @@ function bgchange() {
   document.getElementById("welcome").style.backgroundImage = randomimg;
 }
 </script>
-<div class="content">
+
+
 <div class="welcome" id="welcome">
   <h4 id="curios05">stay curios</h4>
   <button class="invisble"></button>
